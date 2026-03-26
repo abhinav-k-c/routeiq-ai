@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 export default function App() {
-  const [email, setEmail] = useState("");
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <header className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
@@ -28,7 +24,12 @@ export default function App() {
         </p>
 
         <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-500">
-          Built for AI startups looking to control LLM costs and improve performance.
+          Built for AI startups looking to control LLM costs and improve
+          performance.
+        </p>
+
+        <p className="mt-4 text-sm text-slate-400">
+          Are you sending every request to your most expensive model?
         </p>
 
         <div
@@ -36,27 +37,26 @@ export default function App() {
           className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-6"
         >
           <p className="text-sm uppercase tracking-wide text-slate-400">
-            Get early access to RouteIQ
+            Get Early Access
           </p>
 
-          <div className="flex w-full flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none"
-            />
+          <p className="text-center text-sm text-slate-400">
+            Join the RouteIQ waitlist and we’ll reach out when early access
+            opens.
+          </p>
 
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScTVhb8oRYbNysfEHDnDx5GGCQ3NnyNOO1TO2R_UJEq8DGYqA/viewform?usp=publish-editor"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-black transition hover:opacity-90"
-            >
-              Join Waitlist
-            </a>
-          </div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScTVhb8oRYbNysfEHDnDx5GGCQ3NnyNOO1TO2R_UJEq8DGYqA/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-black transition hover:opacity-90"
+          >
+            Get Early Access
+          </a>
+
+          <p className="text-xs text-slate-500">
+            No spam. We’ll only reach out when early access opens.
+          </p>
         </div>
       </section>
 
@@ -77,10 +77,42 @@ export default function App() {
         ))}
       </section>
 
+      <section className="mx-auto mt-24 max-w-6xl px-6">
+        <h2 className="text-center text-3xl font-bold">
+          Why founders choose RouteIQ
+        </h2>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            [
+              "Smart Routing",
+              "Automatically selects the best AI model for each request.",
+            ],
+            [
+              "Lower Costs",
+              "Reduce LLM and API spend with intelligent routing logic.",
+            ],
+            [
+              "Reliable Performance",
+              "Keep latency low with fallback models and consistent uptime.",
+            ],
+          ].map(([title, desc]) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            >
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="mt-3 text-slate-400">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto mt-24 max-w-6xl px-6 text-center">
         <h2 className="text-3xl font-bold">How it works</h2>
         <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-          RouteIQ helps AI teams control model costs with a simple routing workflow.
+          RouteIQ helps AI teams control model costs with a simple routing
+          workflow.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -127,7 +159,7 @@ export default function App() {
             href="#waitlist"
             className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black"
           >
-            Join the Early Access List
+            Get Early Access
           </a>
         </div>
       </section>
