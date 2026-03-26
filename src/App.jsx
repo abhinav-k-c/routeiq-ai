@@ -17,14 +17,18 @@ export default function App() {
 
       <section className="mx-auto mt-16 max-w-5xl px-6 text-center">
         <h1 className="text-5xl font-bold leading-tight md:text-6xl">
-          Reduce AI API costs
+          Optimize your AI API costs
           <br />
-          without slowing down
+          without slowing down your product
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
-          RouteIQ intelligently routes your AI requests to the best model for
-          cost, speed, and performance so startups can scale efficiently.
+          RouteIQ intelligently routes your AI requests to the right model to
+          balance cost, speed, and performance.
+        </p>
+
+        <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-500">
+          Built for AI startups looking to control LLM costs and improve performance.
         </p>
 
         <div
@@ -32,7 +36,7 @@ export default function App() {
           className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-6"
         >
           <p className="text-sm uppercase tracking-wide text-slate-400">
-            Get early access
+            Get early access to RouteIQ
           </p>
 
           <div className="flex w-full flex-col gap-3 sm:flex-row">
@@ -105,10 +109,10 @@ export default function App() {
       </section>
 
       <section className="mx-auto mt-24 max-w-4xl px-6 pb-20 text-center">
-        <h2 className="text-3xl font-bold">Pilot Pricing</h2>
+        <h2 className="text-3xl font-bold">Early Access</h2>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
-          <h3 className="text-xl font-semibold">Early Access Plan</h3>
+          <h3 className="text-xl font-semibold">Join the RouteIQ Pilot</h3>
           <p className="mt-4 text-4xl font-bold">Contact Us</p>
 
           <ul className="mt-6 space-y-2 text-slate-400">
@@ -122,7 +126,7 @@ export default function App() {
             href="#waitlist"
             className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black"
           >
-            Get Early Access
+            Join the Early Access List
           </a>
         </div>
       </section>
