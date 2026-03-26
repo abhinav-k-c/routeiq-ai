@@ -11,7 +11,7 @@ export default function App() {
           href="#waitlist"
           className="rounded-xl bg-white px-4 py-2 font-semibold text-black"
         >
-          Join Waitlist
+          Get Early Access
         </a>
       </header>
 
@@ -62,10 +62,10 @@ export default function App() {
 
       <section className="mx-auto mt-20 grid max-w-5xl grid-cols-2 gap-6 px-6 md:grid-cols-4">
         {[
-          ["40%", "Cost Reduction"],
-          ["2x", "Faster Responses"],
-          ["99.9%", "Uptime"],
-          ["24/7", "Monitoring"],
+          ["Cost-aware", "Routing Logic"],
+          ["Latency-focused", "Performance"],
+          ["Flexible", "Model Selection"],
+          ["Early Access", "Now Open"],
         ].map(([value, label]) => (
           <div
             key={label}
@@ -77,24 +77,25 @@ export default function App() {
         ))}
       </section>
 
-      <section className="mx-auto mt-24 max-w-6xl px-6">
-        <h2 className="text-center text-3xl font-bold">
-          Why founders choose RouteIQ
-        </h2>
+      <section className="mx-auto mt-24 max-w-6xl px-6 text-center">
+        <h2 className="text-3xl font-bold">How it works</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-slate-400">
+          RouteIQ helps AI teams control model costs with a simple routing workflow.
+        </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             [
-              "Smart Routing",
-              "Automatically selects the best AI model for each request.",
+              "1. Connect your workflow",
+              "Start with your current AI usage patterns, prompts, or API flow.",
             ],
             [
-              "Lower Costs",
-              "Reduce LLM and API spend with intelligent routing logic.",
+              "2. Route requests intelligently",
+              "Send each request to the right model based on cost, latency, and performance needs.",
             ],
             [
-              "Reliable Performance",
-              "Keep latency low with fallback models and consistent uptime.",
+              "3. Monitor and improve",
+              "Track usage, reduce waste, and improve system performance as you scale.",
             ],
           ].map(([title, desc]) => (
             <div
