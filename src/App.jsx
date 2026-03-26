@@ -1,92 +1,131 @@
+import { useState } from "react";
+
 export default function App() {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-
-      {/* NAVBAR */}
-      <header className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+      <header className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
         <h1 className="text-xl font-bold">RouteIQ AI</h1>
-        <button className="bg-white text-black px-4 py-2 rounded-xl font-semibold">
-          Book Demo
-        </button>
+        <a
+          href="#waitlist"
+          className="rounded-xl bg-white px-4 py-2 font-semibold text-black"
+        >
+          Join Waitlist
+        </a>
       </header>
 
-      {/* HERO */}
-      <section className="text-center mt-20 px-6">
-        <h1 className="text-5xl font-bold leading-tight">
-          Cut AI costs <br /> without slowing down
+      <section className="mx-auto mt-16 max-w-5xl px-6 text-center">
+        <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+          Reduce AI API costs
+          <br />
+          without slowing down
         </h1>
 
-        <p className="mt-6 text-gray-400 max-w-xl mx-auto">
-          RouteIQ intelligently routes your AI requests to the best model,
-          saving money while maintaining performance.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
+          RouteIQ intelligently routes your AI requests to the best model for
+          cost, speed, and performance so startups can scale efficiently.
         </p>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold">
-            Start Free
-          </button>
-          <button className="border border-white px-6 py-3 rounded-xl">
-            Live Demo
-          </button>
+        <div
+          id="waitlist"
+          className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-6"
+        >
+          <p className="text-sm uppercase tracking-wide text-slate-400">
+            Get early access
+          </p>
+
+          <div className="flex w-full flex-col gap-3 sm:flex-row">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none"
+            />
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScTVhb8oRYbNysfEHDnDx5GGCQ3NnyNOO1TO2R_UJEq8DGYqA/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-black transition hover:opacity-90"
+            >
+              Join Waitlist
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-20 px-6">
+      <section className="mx-auto mt-20 grid max-w-5xl grid-cols-2 gap-6 px-6 md:grid-cols-4">
         {[
           ["40%", "Cost Reduction"],
           ["2x", "Faster Responses"],
           ["99.9%", "Uptime"],
           ["24/7", "Monitoring"],
         ].map(([value, label]) => (
-          <div key={label} className="bg-white/5 p-6 rounded-2xl text-center">
+          <div
+            key={label}
+            className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
+          >
             <h2 className="text-2xl font-bold">{value}</h2>
-            <p className="text-gray-400 mt-2">{label}</p>
+            <p className="mt-2 text-slate-400">{label}</p>
           </div>
         ))}
       </section>
 
-      {/* FEATURES */}
-      <section className="max-w-6xl mx-auto mt-24 px-6">
-        <h2 className="text-3xl font-bold text-center">
-          Why founders choose us
+      <section className="mx-auto mt-24 max-w-6xl px-6">
+        <h2 className="text-center text-3xl font-bold">
+          Why founders choose RouteIQ
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-10">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
-            ["Smart Routing", "Automatically selects the best AI model"],
-            ["Save Costs", "Reduce API bills by up to 70%"],
-            ["Fast Performance", "Low latency with fallback models"],
+            [
+              "Smart Routing",
+              "Automatically selects the best AI model for each request.",
+            ],
+            [
+              "Lower Costs",
+              "Reduce LLM and API spend with intelligent routing logic.",
+            ],
+            [
+              "Reliable Performance",
+              "Keep latency low with fallback models and consistent uptime.",
+            ],
           ].map(([title, desc]) => (
-            <div key={title} className="bg-white/5 p-6 rounded-2xl">
+            <div
+              key={title}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            >
               <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-gray-400 mt-3">{desc}</p>
+              <p className="mt-3 text-slate-400">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* PRICING */}
-      <section className="max-w-4xl mx-auto mt-24 px-6 text-center">
-        <h2 className="text-3xl font-bold">Simple Pricing</h2>
+      <section className="mx-auto mt-24 max-w-4xl px-6 pb-20 text-center">
+        <h2 className="text-3xl font-bold">Pilot Pricing</h2>
 
-        <div className="bg-white/5 p-8 rounded-3xl mt-10">
-          <h3 className="text-xl font-semibold">Starter Plan</h3>
-          <p className="text-4xl font-bold mt-4">$99/month</p>
+        <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 className="text-xl font-semibold">Early Access Plan</h3>
+          <p className="mt-4 text-4xl font-bold">Contact Us</p>
 
-          <ul className="mt-6 text-gray-400 space-y-2">
-            <li>✔ 100K requests</li>
-            <li>✔ Cost dashboard</li>
-            <li>✔ Smart routing</li>
-            <li>✔ Email support</li>
+          <ul className="mt-6 space-y-2 text-slate-400">
+            <li>✔ Smart model routing</li>
+            <li>✔ Cost optimization insights</li>
+            <li>✔ Performance monitoring</li>
+            <li>✔ Founder support</li>
           </ul>
 
-          <button className="mt-6 bg-white text-black px-6 py-3 rounded-xl font-semibold">
-            Get Started
-          </button>
+          <a
+            href="#waitlist"
+            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black"
+          >
+            Get Early Access
+          </a>
         </div>
       </section>
-
     </div>
   );
 }
